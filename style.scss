@@ -1,0 +1,222 @@
+/*color variables */
+$color-main: rgb(30, 30, 44);
+$color-secondary: white;
+$overlay-color: rgba(30, 30, 44, 0.712);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body {
+    font-size: 1.1rem ;
+    line-height: 1.6 ;
+    font-family: 'Catamaran', sans-serif ;
+    color: white ;
+
+    h1, h2, h3, h4 {
+        line-height: 1.3;
+        font-family: 'Permanent Marker', cursive ;
+    }
+
+    a {
+        text-decoration: none ;
+        color: $color-secondary ;
+        text-transform: uppercase ;
+        font-style: bold ;
+
+        &:hover {
+            color: rgb(156, 2, 156) ;
+        }
+    }
+
+    img {
+        width:  100% ;
+    }
+
+    .container {
+        max-width: 1100px ;
+        margin: auto ;
+        overflow: hidden ;
+        padding: 0 2rem ;
+    }
+
+    p {
+        font-size:1.3rem ;
+    }
+
+    .site-header,
+    .section-recording {
+        background-repeat: no-repeat ;
+        background-position: center ;
+        background-size: cover ;
+        position: relative ;
+
+        &:after {
+            content: '';
+            background-color: $overlay-color;
+            top: 0 ;
+            left: 0 ;
+            position: absolute ;
+            height: 100% ;
+            width: 100% ;
+            z-index: 5 ;
+        }
+    }
+    
+}
+
+.site-header {
+    height: 100vh ;
+    background: url(img/performer.jpg) ;
+
+    .nav {
+        height: 10% ;
+        font-size: 1.2rem ;
+        padding-top: 0.8rem ;
+        padding-bottom: 0.8rem ;
+        position: relative ;
+        z-index: 100 ;
+
+        ul {
+            list-style: none ;
+        }
+
+        .container {
+            display: grid ;
+            grid-template-columns: repeat(2, 1fr) ;
+        }
+
+        .nav-logo {
+            font-size: 2rem ;
+            color: purple ;
+        }
+
+        .menu {
+            justify-self: flex-end ;
+            display: flex ;
+            align-items: center ; 
+            justify-content: center ;
+        }
+
+        a {
+            padding: 0 1rem ;
+            transition: 0.3s;
+            
+        }
+    }
+
+    .header-text {
+        height: 90% ;
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center ;
+        align-items: center ;
+        text-align: center ;
+        position: relative ;
+        z-index: 100 ;
+
+        h1 {
+            font-size: 8rem ;
+            margin-bottom: 30px ;
+        }
+        .header-btn {
+            border: white solid 2px ;
+            padding: 10px 20px;
+            transition: 0.3s;
+
+            &:hover {
+                border: purple solid 2px ;
+            }
+        }
+    }
+}
+
+.section-newAlbum {
+
+    background-color: $color-main;
+    height: 700px ;
+
+    .section-text {
+        display: flex ;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100% ;
+        margin: auto auto;
+        
+    }
+
+    h1 {
+        display: inline block ;
+        padding-bottom: 50px ;
+        border-bottom: purple solid 4px ;
+        margin-bottom: 50px ;
+        font-size: 2rem ;
+    }
+    
+    p {
+        
+        font-family: "Permanent Marker", cursive;
+    }
+}
+
+.section-recording {
+    height: 700px ;
+    background-image: url(img/artist-recording-session.jpg);
+}
+
+.section-social-media {
+    background-color: $color-main;
+    height: 500px ;
+    border-bottom: rgb(37, 37, 61) solid 1px ;
+
+    .section-text {
+        display: flex ;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100% ;
+        margin: auto auto;
+        
+    }
+
+    h1 {
+        display: inline block ;
+        padding-bottom: 50px ;
+        border-bottom: purple solid 4px ;
+        margin-bottom: 50px ;
+        font-size: 2rem ;
+    }
+    .connect {
+        display: flex ;
+        flex-direction: row ;
+        
+    }
+    
+    .icon {
+        padding: 20px 20px ;
+        margin-right: 5px;      
+    }
+       
+}
+
+.footer {
+    height: 100px ;
+    background-color: $color-main;
+
+    .section-text {
+        display: flex ;
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center ;
+        margin: auto auto ;
+        height: 100%;
+
+        color: rgb(62, 62, 105);
+    }
+}
